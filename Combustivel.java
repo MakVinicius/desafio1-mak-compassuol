@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Combustivel {
     private boolean gasolina;
     private boolean alcool;
@@ -21,11 +23,24 @@ public class Combustivel {
     public Combustivel() {}
 
     public String info() {
-        String information = "{\n\t\tgasolina: " + isGasolina() + ",\n\t\talcool: " + isAlcool()
-                + ",\n\t\tdiesel: " + isDiesel() + ",\n\t\teletricidade: "
-                + isEletricidade() + ",\n\t\thumano: " + isHumano() + ",\n\t\tanimal: " +
-                isAnimal() + ",\n\t\tquantidade: " + getQuantidade() + "\n\t}";
+        String information = "{" +
+                "\n\t\tgasolina: " + verificador(isGasolina())
+                + ",\n\t\talcool: " + verificador(isAlcool())
+                + ",\n\t\tdiesel: " + verificador(isDiesel())
+                + ",\n\t\teletricidade: " + verificador(isEletricidade())
+                + ",\n\t\thumano: " + verificador(isHumano())
+                + ",\n\t\tanimal: " + verificador(isAnimal())
+                + ",\n\t\tquantidade: " + verificador(getQuantidade())
+                + "\n\t}";
         return information;
+    }
+
+    public String verificador(boolean variavel) {
+        return (!Objects.isNull(variavel) ? String.valueOf(variavel) : "");
+    }
+
+    public String verificador(double variavel) {
+        return (!Objects.isNull(variavel) ? String.valueOf(variavel) : "");
     }
 
     public boolean isGasolina() {

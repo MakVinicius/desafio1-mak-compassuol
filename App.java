@@ -1,5 +1,9 @@
+import java.util.ArrayList;
+
 public class App {
     public static void main(String[] args) {
+        // Criando e imprimindo o conteúdo da variável tipo Carro
+        // Nessa variável eu utilizei o construtor para criar o objeto
         Combustivel combustivelCarro = new Combustivel(
                 true,
                 false,
@@ -9,7 +13,7 @@ public class App {
                 false,
                 15
         );
-        Veiculo veiculoCarro = new Carro(
+        Carro veiculoCarro = new Carro(
                 true,
                 true,
                 4,
@@ -22,40 +26,7 @@ public class App {
                 false
         );
         System.out.println(veiculoCarro.info());
-        /*
-        Se criarmos a variável veiculoCarro do tipo Veiculo instanciando Carro, o Java não me dá acesso
-        às variáveis temArCondicionado e temRadio.
-        Esses códigos não funcionam:
-            veiculoCarro.setTemArCondicionado();
-            veiculoCarro.setTemRadio();
-        Ai pra funcionar eu tenho que adicionar o (Carro) na frente da variável para conseguir acessar
-        essas propriedades.
-        */
-
-
-        // Criando e imprimindo o conteúdo da variável tipo Carro
-        Combustivel combustivelCarroApenas = new Combustivel();
-        combustivelCarroApenas.setGasolina(true);
-        combustivelCarroApenas.setAlcool(false);
-        combustivelCarroApenas.setDiesel(false);
-        combustivelCarroApenas.setEletricidade(false);
-        combustivelCarroApenas.setHumano(false);
-        combustivelCarroApenas.setAnimal(false);
-        combustivelCarroApenas.setQuantidade(35);
-
-        Veiculo veiculoCarroApenas = new Carro();
-        veiculoCarroApenas.setMotor(true);
-        veiculoCarroApenas.setVolante(true);
-        veiculoCarroApenas.setQtdPassageiros(4);
-        veiculoCarroApenas.setQtdPortas(4);
-        veiculoCarroApenas.setQtdRodas(4);
-        veiculoCarroApenas.seteDeCarga(false);
-        veiculoCarroApenas.setCapacidadeCarga(0);
-        veiculoCarroApenas.setCombustivel(combustivelCarroApenas);
-        ((Carro) veiculoCarroApenas).setTemArCondicionado(false);
-        ((Carro) veiculoCarroApenas).setTemRadio(true);
-        System.out.println(veiculoCarroApenas.info());
-        System.out.println(((Carro) veiculoCarroApenas).som());
+        System.out.println(veiculoCarro.som());
 
 
         // Criando e imprimindo o conteúdo da variável tipo Moto
@@ -68,7 +39,7 @@ public class App {
         combustivelMoto.setAnimal(false);
         combustivelMoto.setQuantidade(7);
 
-        Veiculo veiculoMoto = new Moto();
+        Moto veiculoMoto = new Moto();
         veiculoMoto.setMotor(true);
         veiculoMoto.setVolante(false);
         veiculoMoto.setQtdPassageiros(2);
@@ -77,9 +48,9 @@ public class App {
         veiculoMoto.seteDeCarga(false);
         veiculoMoto.setCapacidadeCarga(0);
         veiculoMoto.setCombustivel(combustivelMoto);
-        ((Moto) veiculoMoto).setPartidaEletrica(true);
+        veiculoMoto.setPartidaEletrica(true);
         System.out.println(veiculoMoto.info());
-        System.out.println(((Moto) veiculoMoto).som());
+        System.out.println(veiculoMoto.som());
 
 
         // Criando e imprimindo o conteúdo da variável tipo Bicicleta
@@ -92,7 +63,7 @@ public class App {
         combustivelBike.setAnimal(false);
         combustivelBike.setQuantidade(1.5);
 
-        Veiculo veiculoBike = new Bicicleta();
+        Bicicleta veiculoBike = new Bicicleta();
         veiculoBike.setMotor(false);
         veiculoBike.setVolante(false);
         veiculoBike.setQtdPassageiros(1);
@@ -101,10 +72,10 @@ public class App {
         veiculoBike.seteDeCarga(false);
         veiculoBike.setCapacidadeCarga(0);
         veiculoBike.setCombustivel(combustivelBike);
-        ((Bicicleta) veiculoBike).seteEletrica(false);
-        ((Bicicleta) veiculoBike).setTemBagageiro(false);
+        veiculoBike.seteEletrica(false);
+        veiculoBike.setTemBagageiro(false);
         System.out.println(veiculoBike.info());
-        System.out.println(((Bicicleta) veiculoBike).som());
+        System.out.println(veiculoBike.som());
 
 
         // Criando e imprimindo o conteúdo da variável tipo Charrete
@@ -117,7 +88,7 @@ public class App {
         combustivelCharrete.setAnimal(true);
         combustivelCharrete.setQuantidade(3.5);
 
-        Veiculo veiculoCharrete = new Charrete();
+        Charrete veiculoCharrete = new Charrete();
         veiculoCharrete.setMotor(false);
         veiculoCharrete.setVolante(false);
         veiculoCharrete.setQtdPassageiros(4);
@@ -126,9 +97,9 @@ public class App {
         veiculoCharrete.seteDeCarga(false);
         veiculoCharrete.setCapacidadeCarga(0);
         veiculoCharrete.setCombustivel(combustivelCharrete);
-        ((Charrete) veiculoCharrete).setQtdCavalos(2);
+        veiculoCharrete.setQtdCavalos(2);
         System.out.println(veiculoCharrete.info());
-        System.out.println(((Charrete) veiculoCharrete).som());
+        System.out.println(veiculoCharrete.som());
 
 
         // Criando e imprimindo o conteúdo da variável tipo Caminhao
@@ -141,7 +112,7 @@ public class App {
         combustivelCaminhao.setAnimal(false);
         combustivelCaminhao.setQuantidade(250);
 
-        Veiculo veiculoCaminhao = new Caminhao();
+        Caminhao veiculoCaminhao = new Caminhao();
         veiculoCaminhao.setMotor(true);
         veiculoCaminhao.setVolante(true);
         veiculoCaminhao.setQtdPassageiros(2);
@@ -150,10 +121,24 @@ public class App {
         veiculoCaminhao.seteDeCarga(true);
         veiculoCaminhao.setCapacidadeCarga(12000);
         veiculoCaminhao.setCombustivel(combustivelCaminhao);
-        ((Caminhao) veiculoCaminhao).setQtdEixos(2);
+        veiculoCaminhao.setQtdEixos(2);
         System.out.println(veiculoCaminhao.info());
-        System.out.println(((Caminhao) veiculoCaminhao).som());
-        
+        System.out.println(veiculoCaminhao.som());
+
+        System.out.println("\n============== Testando objetos vazios (sem informacao definida) ==============");
+
+        ArrayList<Veiculo> listaVeiculos = new ArrayList<>();
+        listaVeiculos.add(new Carro());
+        listaVeiculos.add(new Moto());
+        listaVeiculos.add(new Caminhao());
+        listaVeiculos.add(new Charrete());
+        listaVeiculos.add(new Bicicleta());
+        listaVeiculos.add(new Veiculo());
+
+        for (Veiculo listaVeiculo : listaVeiculos) {
+            System.out.println(listaVeiculo.info());
+        }
+
     }
 
 

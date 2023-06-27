@@ -13,12 +13,18 @@ public class Bicicleta extends Veiculo {
     public Bicicleta() {}
 
     public String info() {
-        String information = "\nBicicleta { \n\tmotor: " + isMotor() + ",\n\tvolante: " + isVolante()
-                + ",\n\tquantidade passageiros: " + getQtdPassageiros() + ",\n\tquantidade portas: "
-                + getQtdPortas() + ",\n\tquantidade rodas: " + getQtdRodas() + ",\n\teh de carga: " +
-                iseDeCarga() + ",\n\tcapacidade carga: " + getCapacidadeCarga() + ",\n\tcombustivel: "
-                + getCombustivel().info() + ",\n\teh eletrica: " + iseEletrica()
-                + ",\n\ttem bagageiro: " + isTemBagageiro() + "\n}";
+        String information = "\nBicicleta {"
+                + "\n\tmotor: " + verificador(isMotor())
+                + ",\n\tvolante: " + verificador(isVolante())
+                + ",\n\tquantidade passageiros: " + verificador(getQtdPassageiros())
+                + ",\n\tquantidade portas: " + verificador(getQtdPortas())
+                + ",\n\tquantidade rodas: " + verificador(getQtdRodas())
+                + ",\n\teh de carga: " + verificador(iseDeCarga())
+                + ",\n\tcapacidade carga: " + verificador(getCapacidadeCarga())
+                + ",\n\tcombustivel: " + getCombustivel().info()
+                + ",\n\teh eletrica: " + verificador(iseEletrica())
+                + ",\n\ttem bagageiro: " + verificador(isTemBagageiro())
+                + "\n}";
         return information;
     }
 

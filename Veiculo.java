@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Veiculo {
     private boolean motor;
     private boolean volante;
@@ -6,9 +8,10 @@ public class Veiculo {
     private int qtdRodas;
     private boolean eDeCarga;
     private double capacidadeCarga;
-    private Combustivel combustivel;
+    private Combustivel combustivel = new Combustivel();
 
-    public Veiculo(boolean motor, boolean volante, int qtdPassageiros, int qtdPortas, int qtdRodas, boolean eDeCarga, double capacidadeCarga, Combustivel combustivel) {
+    public Veiculo(boolean motor, boolean volante, int qtdPassageiros, int qtdPortas, int qtdRodas,
+                   boolean eDeCarga, double capacidadeCarga, Combustivel combustivel) {
         this.motor = motor;
         this.volante = volante;
         this.qtdPassageiros = qtdPassageiros;
@@ -22,18 +25,37 @@ public class Veiculo {
     public Veiculo() {}
 
     public String info() {
-        String information = "\nVeiculo { \n\tmotor: " + isMotor() + ",\n\tvolante: " + isVolante()
-                + ",\n\tquantidade passageiros: " + getQtdPassageiros() + ",\n\tquantidade portas: "
-                + getQtdPortas() + ",\n\tquantidade rodas: " + getQtdRodas() + ",\n\teh de carga: " +
-                iseDeCarga() + ",\n\tcapacidade carga: " + getCapacidadeCarga() + ",\n\tcombustivel: "
-                + getCombustivel().info() + "\n}";
+        String information = "\nVeiculo {"
+                + "\n\tmotor: " + verificador(isMotor())
+                + ",\n\tvolante: " + verificador(isVolante())
+                + ",\n\tquantidade passageiros: " + verificador(getQtdPassageiros())
+                + ",\n\tquantidade portas: " + verificador(getQtdPortas())
+                + ",\n\tquantidade rodas: " + verificador(getQtdRodas())
+                + ",\n\teh de carga: " + verificador(iseDeCarga())
+                + ",\n\tcapacidade carga: " + verificador(getCapacidadeCarga())
+                + ",\n\tcombustivel: " + getCombustivel().info()
+                + "\n}";
         return information;
     }
+
+    public String verificador(boolean variavel) {
+        // a primeira parte do algoritmo verifica se a variavel é nula ou não
+        // a função String.valueOf() transforma a variavel em string, pois o método precisa retornar uma string
+        return (!Objects.isNull(variavel) ? String.valueOf(variavel) : "");
+    }
+
+    public String verificador(int variavel) {
+        return (!Objects.isNull(variavel) ? String.valueOf(variavel) : "");
+    }
+
+    public String verificador(double variavel) {
+        return (!Objects.isNull(variavel) ? String.valueOf(variavel) : "");
+    }
+
 
     public boolean isMotor() {
         return motor;
     }
-
     public void setMotor(boolean motor) {
         this.motor = motor;
     }
