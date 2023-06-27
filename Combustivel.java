@@ -18,6 +18,8 @@ public class Combustivel {
         this.quantidade = quantidade;
     }
 
+    public Combustivel() {}
+
     public String info() {
         String information = "{\n\t\tgasolina: " + isGasolina() + ",\n\t\talcool: " + isAlcool()
                 + ",\n\t\tdiesel: " + isDiesel() + ",\n\t\teletricidade: "

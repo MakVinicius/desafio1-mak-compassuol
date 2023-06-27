@@ -8,6 +8,8 @@ public class Moto extends Veiculo{
         this.partidaEletrica = partidaEletrica;
     }
 
+    public Moto() {}
+
     public String info() {
         String information = "\nMoto { \n\tmotor: " + isMotor() + ",\n\tvolante: " + isVolante()
                 + ",\n\tquantidade passageiros: " + getQtdPassageiros() + ",\n\tquantidade portas: "
@@ -19,7 +21,7 @@ public class Moto extends Veiculo{
     }
 
     public String som() {
-        return "\nVruuuuummmmm";
+        return "\nSom da moto: Vruuuuummmmm";
     }
 
     public boolean isPartidaEletrica() {

@@ -8,6 +8,8 @@ public class Caminhao extends Veiculo{
         this.qtdEixos = qtdEixos;
     }
 
+    public Caminhao() {}
+
     public String info() {
         String information = "\nCaminhao { \n\tmotor: " + isMotor() + ",\n\tvolante: " + isVolante()
                 + ",\n\tquantidade passageiros: " + getQtdPassageiros() + ",\n\tquantidade portas: "
@@ -19,7 +21,7 @@ public class Caminhao extends Veiculo{
     }
 
     public String som() {
-        return "\nVrom vrom vrom";
+        return "\nSom do caminhao: Vrom vrom vrom";
     }
 
     public int getQtdEixos() {

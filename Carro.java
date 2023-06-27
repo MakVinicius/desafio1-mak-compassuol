@@ -10,6 +10,8 @@ public class Carro extends Veiculo {
         this.temRadio = temRadio;
     }
 
+    public Carro() {}
+
     public String info() {
         String information = "\nCarro { \n\tmotor: " + isMotor() + ",\n\tvolante: " + isVolante()
                 + ",\n\tquantidade passageiros: " + getQtdPassageiros() + ",\n\tquantidade portas: "
@@ -21,7 +23,7 @@ public class Carro extends Veiculo {
     }
 
     public String som() {
-        return "\nGgrrooo ggrrooo ggrrooo";
+        return "\nSom do carro: Ggrrooo ggrrooo ggrrooo";
     }
 
     public boolean isTemArCondicionado() {

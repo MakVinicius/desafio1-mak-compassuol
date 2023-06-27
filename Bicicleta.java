@@ -10,6 +10,8 @@ public class Bicicleta extends Veiculo {
         this.temBagageiro = temBagageiro;
     }
 
+    public Bicicleta() {}
+
     public String info() {
         String information = "\nBicicleta { \n\tmotor: " + isMotor() + ",\n\tvolante: " + isVolante()
                 + ",\n\tquantidade passageiros: " + getQtdPassageiros() + ",\n\tquantidade portas: "
@@ -21,7 +23,7 @@ public class Bicicleta extends Veiculo {
     }
 
     public String som() {
-        return "\nNhec nhec nhec";
+        return "\nSom da bicicleta: Nhec nhec nhec";
     }
 
     public boolean iseEletrica() {

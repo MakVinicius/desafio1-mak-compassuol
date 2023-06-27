@@ -8,6 +8,8 @@ public class Charrete extends Veiculo {
         this.qtdCavalos = qtdCavalos;
     }
 
+    public Charrete() {}
+
     public String info() {
         String information = "\nCharrete { \n\tmotor: " + isMotor() + ",\n\tvolante: " + isVolante()
                 + ",\n\tquantidade passageiros: " + getQtdPassageiros() + ",\n\tquantidade portas: "
@@ -19,7 +21,7 @@ public class Charrete extends Veiculo {
     }
 
     public String som() {
-        return "\nToc toc toc";
+        return "\nSom da charrete: Toc toc toc";
     }
 
     public int getQtdCavalos() {

@@ -19,6 +19,8 @@ public class Veiculo {
         this.combustivel = combustivel;
     }
 
+    public Veiculo() {}
+
     public String info() {
         String information = "\nVeiculo { \n\tmotor: " + isMotor() + ",\n\tvolante: " + isVolante()
                 + ",\n\tquantidade passageiros: " + getQtdPassageiros() + ",\n\tquantidade portas: "
