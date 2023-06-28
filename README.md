@@ -9,8 +9,9 @@ Desafio da semana 4 do programa de bolsas da Compass.UOL
 - Antes estava assim: Veiculo veiculoCarro = new Carro();
 - Agora ficou assim: Carro veiculoCarro = new Carro();
 - Com isso, eu consegui retirar todos os castings do código;
-- Por fim, adicionei uma função verificador() que verifica se a variável é nula, caso seja, retorna uma string vazia;
+- Adicionei uma função verificador() que verifica se a variável é nula, caso seja, retorna uma string vazia;
 - Adicionei essa função para lidar com instâncias vazias das classes;
+- Adicionei uma função constructorInfo() na classe pai para construir a informação base e diminuir o tamanho de código nas classes filhas;
 
 # Conteúdo adicional, além do que foi solicitado
 - Dentro da classe Combustivel eu adicionei uma variável chamada quantidade, que representa a quantidade de litros (gasolina, álcool, diesel) que um tanque tem, ou a quantidade de horas (eletricidade, humano, animal) que um veículo consegue se movimentar;
