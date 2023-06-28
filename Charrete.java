@@ -11,15 +11,8 @@ public class Charrete extends Veiculo {
     public Charrete() {}
 
     public String info() {
-        String information = "\nCharrete {"
-                + "\n\tmotor: " + verificador(isMotor())
-                + ",\n\tvolante: " + verificador(isVolante())
-                + ",\n\tquantidade passageiros: " + verificador(getQtdPassageiros())
-                + ",\n\tquantidade portas: " + verificador(getQtdPortas())
-                + ",\n\tquantidade rodas: " + verificador(getQtdRodas())
-                + ",\n\teh de carga: " + verificador(iseDeCarga())
-                + ",\n\tcapacidade carga: " + verificador(getCapacidadeCarga())
-                + ",\n\tcombustivel: " + getCombustivel().info()
+        String information = "\nCharrete "
+                + this.constructInfo()
                 + ",\n\tquantidade cavalos: " + verificador(getQtdCavalos())
                 + "\n}";
         return information;

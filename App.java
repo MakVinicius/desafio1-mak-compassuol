@@ -30,6 +30,7 @@ public class App {
 
 
         // Criando e imprimindo o conteúdo da variável tipo Moto
+        // Nessa variável eu usei os setters para alterar os valores das propriedades
         Combustivel combustivelMoto = new Combustivel();
         combustivelMoto.setGasolina(true);
         combustivelMoto.setAlcool(false);

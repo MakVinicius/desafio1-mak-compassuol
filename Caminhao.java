@@ -11,15 +11,8 @@ public class Caminhao extends Veiculo{
     public Caminhao() {}
 
     public String info() {
-        String information = "\nCaminhao {"
-                + "\n\tmotor: " + verificador(isMotor())
-                + ",\n\tvolante: " + verificador(isVolante())
-                + ",\n\tquantidade passageiros: " + verificador(getQtdPassageiros())
-                + ",\n\tquantidade portas: " + verificador(getQtdPortas())
-                + ",\n\tquantidade rodas: " + verificador(getQtdRodas())
-                + ",\n\teh de carga: " + verificador(iseDeCarga())
-                + ",\n\tcapacidade carga: " + verificador(getCapacidadeCarga())
-                + ",\n\tcombustivel: " + getCombustivel().info()
+        String information = "\nCaminhao "
+                + this.constructInfo()
                 + ",\n\tquantidade eixos: " + verificador(getQtdEixos())
                 + "\n}";
         return information;

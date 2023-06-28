@@ -13,15 +13,8 @@ public class Bicicleta extends Veiculo {
     public Bicicleta() {}
 
     public String info() {
-        String information = "\nBicicleta {"
-                + "\n\tmotor: " + verificador(isMotor())
-                + ",\n\tvolante: " + verificador(isVolante())
-                + ",\n\tquantidade passageiros: " + verificador(getQtdPassageiros())
-                + ",\n\tquantidade portas: " + verificador(getQtdPortas())
-                + ",\n\tquantidade rodas: " + verificador(getQtdRodas())
-                + ",\n\teh de carga: " + verificador(iseDeCarga())
-                + ",\n\tcapacidade carga: " + verificador(getCapacidadeCarga())
-                + ",\n\tcombustivel: " + getCombustivel().info()
+        String information = "\nBicicleta "
+                + this.constructInfo()
                 + ",\n\teh eletrica: " + verificador(iseEletrica())
                 + ",\n\ttem bagageiro: " + verificador(isTemBagageiro())
                 + "\n}";

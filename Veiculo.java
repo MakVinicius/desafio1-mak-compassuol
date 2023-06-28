@@ -25,7 +25,14 @@ public class Veiculo {
     public Veiculo() {}
 
     public String info() {
-        String information = "\nVeiculo {"
+        String information = "\nVeiculo "
+                + this.constructInfo()
+                + "\n}";
+        return information;
+    }
+
+    public String constructInfo() {
+        String formatado = "{"
                 + "\n\tmotor: " + verificador(isMotor())
                 + ",\n\tvolante: " + verificador(isVolante())
                 + ",\n\tquantidade passageiros: " + verificador(getQtdPassageiros())
@@ -33,9 +40,8 @@ public class Veiculo {
                 + ",\n\tquantidade rodas: " + verificador(getQtdRodas())
                 + ",\n\teh de carga: " + verificador(iseDeCarga())
                 + ",\n\tcapacidade carga: " + verificador(getCapacidadeCarga())
-                + ",\n\tcombustivel: " + getCombustivel().info()
-                + "\n}";
-        return information;
+                + ",\n\tcombustivel: " + getCombustivel().info();
+        return formatado;
     }
 
     public String verificador(boolean variavel) {
